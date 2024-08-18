@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-[#0e0e0e] text-white h-auto">
+    <div class="">
+        <div class="w-full h-20 px-40 pt-6 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">To<span class="text-2xl font-serif italic hover:not-italic">Do.</span> </h1>
+            <div
+                class="bg-transparent px-3 py-1 rounded-lg text-sm border hover:text-black hover:bg-slate-100 hover:border-none hover:font-semibold">
+                Signup
+            </div>
+        </div>
+    </div>
+    <!-- Slogan Sectionn -->
+    <div class="w-full h-auto flex flex-wrap flex-col items-center mt-28 ">
+        <div class="text-5xl">
+            <span class="font-extralight">Plan</span>
+            <span class="font-serif italic hover:not-italic">Focus</span>
+            <span class="font-semibold ">Achieve<span class="text-yellow-400">.</span></span>
+        </div>
+    </div>
+    <!-- Input sectionn -->
+    <div class="w-full h-auto flex flex-wrap flex-col items-center justify-center mt-16">
+        <div class="flex">
+            <input class="w-96 p-2 rounded-lg text-black " type="text"
+                name="input" id="" placeholder="Write todos here">
+            <button onclick="addTodo()" class="bg-green-600 hover:bg-green-700 ml-2 p-2 rounded-lg px-3 ">Add</button>
+        </div>
+    </div>
+
+    <!-- Todo list section -->
+    <div id="todoListmain" class="w-75% h-auto m-20 rounded-lg flex items-center justify-center flex-col-reverse">
+        <div id="todoList" class="px-36 h-auto w-full flex flex-col-reverse">
+            <div id="1" class="px-20 bg-[#080606] shadow-sm shadow-zinc-800  p-3 rounded-lg flex flex-wrap items-center justify-between">
+                <div class="flex">
+                    <input onclick="completedTask(1)" id="myCheck1" class="p-2 " type="checkbox" name="x" id="a" placeholder=".">
+                    <h4 class="text-[20px] font-semibold px-6 flex flex-wrap">1. Take Class</h4>
+                </div>
+                <div class="flex">
+                    <div class=" bg-black shadow-sm rounded-lg p-1 mr-2">
+                        <button class="text-2xl" onclick="editTodo(1)">🖊️</button>
+                    </div>
+                    <div class=" bg-black shadow-sm rounded-lg p-1">
+                        <button class="text-2xl" onclick="deleteTodo(1)">❌</button>
+                    </div>
+                </div>
+            </div>
+            <div id="2" class="px-20 mb-4 bg-[#080606] shadow-sm shadow-zinc-800  p-3 rounded-lg flex flex-wrap items-center justify-between">
+                <div class="flex">
+                    <input onclick="completedTask(2)" id="myCheck2" class="p-2" type="checkbox" name="x" id="a" placeholder=".">
+                    <h4 class="text-[20px] font-semibold px-6">2. Practice the Assignments</h4>
+                </div>
+                <div class="flex">
+                    <div class=" bg-black shadow-sm rounded-lg p-1 mr-2">
+                        <button class="text-2xl" onclick="editTodo(2)">🖊️</button>
+                    </div>
+                    <div class=" bg-black shadow-sm rounded-lg p-1">
+                        <button class="text-2xl" onclick="deleteTodo(2)">❌</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
